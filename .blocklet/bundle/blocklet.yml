@@ -1,0 +1,44 @@
+name: blocklet-demo
+description: Blocklet Project
+group: static
+main: build
+author:
+  name: Murraya-paniculata
+specVersion: 1.2.7
+version: 1.0.0
+logo: logo.png
+scripts:
+  dev: npm run start
+files:
+  - blocklet.md
+  - screenshots
+  - logo.png
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: http
+did: z8iZueEP9y4RX4LTQkwUe27ASe74L9riRWV2Q
+community: ''
+documentation: ''
+homepage: ''
+license: ''
+payment:
+  price: []
+  share: []
+timeout:
+  start: 60
+requirements:
+  server: '>=1.7.0'
+  os: '*'
+  cpu: '*'
+  nodejs: '*'
+environments: []
+capabilities:
+  clusterMode: false
+  component: true
+screenshots: []
+components: []
+gitHash: 11c91eba9b085ff17d02f7d68dcb755f6ec9fd70
