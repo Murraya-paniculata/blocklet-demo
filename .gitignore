@@ -10,6 +10,7 @@
 
 # production
 /build
+/.blocklet
 
 # misc
 .DS_Store
