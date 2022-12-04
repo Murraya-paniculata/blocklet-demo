@@ -1,0 +1,13 @@
+@import "bootstrap/scss/bootstrap.scss";
+
+html,body{
+  padding: 0;
+  margin: 0;
+}
+html{
+  min-height: 100%;
+  background: linear-gradient(19deg, #E68282 0%, #FFD6FF 100%);
+}
+body {
+  background-color: transparent;
+}
