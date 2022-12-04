@@ -3,6 +3,8 @@ import Search from '../components/Search';
 import { connect } from 'dva';
 import Abstract from '../components/Abstract'
 import Tx from '../components/Tx'
+import Nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import { FaBtc } from 'react-icons/fa'
 
 function Home(props) {
@@ -15,8 +17,16 @@ function Home(props) {
 
   const rightAbstract = abstractKeys.slice(Math.ceil(abstractKeys.length / 2), abstractKeys.length).map((key) => {
     return <Abstract key={key} k={key} obj={abstract} />
-  })  
+  })
 
+  useEffect(() => {
+    if(props.loading) {
+      Nprogress.start();
+    } else {
+      Nprogress.done();
+    }
+  }, [props.loading, Nprogress])
+  
   return (
     <div className='mt-4'>
         <Search onSearchQuery={props.onSearchQuery} loading={props.loading} />
