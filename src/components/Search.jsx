@@ -6,7 +6,12 @@ export default function Search(props) {
     const [searchText, setSearchText] = useState('');
 
     const handleSearch = () => {
-        if(searchText) props.onSearchQuery(searchText)
+        // query debounce
+        if(!props.loading && searchText) {
+            props.onSearchQuery(searchText)
+        } else {
+            console.log('请求过于频繁')
+        }
     }
 
     const handleEnterKey = (e) => {
